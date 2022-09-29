@@ -9,4 +9,7 @@ It's not the professionnel work :)
 
 i'm open for any critics, and also to collaboration on all types of projects !
 
+contact me : contact@byds.fr
+Fb & IG : @dominiqsoro
+
 © byds 2022
