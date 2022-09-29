@@ -1,0 +1,374 @@
+
+
+/*=================================================
+~ Debut CSS
+~ Start CSS
+=================================================*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Courier New', Courier, monospace;
+	text-decoration: none;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	flex-direction: column;
+	background: #000;
+
+}
+
+
+
+
+
+
+
+.box {
+	position: relative;
+	width: 380px;
+	height: 400px;
+	background: #1c1c1c;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+
+.box::before {
+	content: '';
+	z-index: 1;
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 380px;
+	height: 400px;
+	transform-origin: bottom right;
+	background: linear-gradient(0deg,transparent,#F55D3E,#F55D3E);
+	animation: animate 6s linear infinite;
+}
+
+.box::after {
+	content: '';
+	z-index: 1;
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 380px;
+	height: 400px;
+	transform-origin: bottom right;
+	background: linear-gradient(0deg,transparent,#F55D3E,#F55D3E);
+	animation: animate 6s linear infinite;
+	animation-delay: -3s;
+}
+
+
+
+
+.box-reg {
+	position: relative;
+	width: 380px;
+	height: 550px;
+	background: #1c1c1c;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+
+.box-reg::before {
+	content: '';
+	z-index: 1;
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 380px;
+	height: 550px;
+	transform-origin: bottom right;
+	background: linear-gradient(0deg,transparent,#F55D3E,#F55D3E);
+	animation: animate 6s linear infinite;
+}
+
+.box-reg::after {
+	content: '';
+	z-index: 1;
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 380px;
+	height: 550px;
+	transform-origin: bottom right;
+	background: linear-gradient(0deg,transparent,#F55D3E,#F55D3E);
+	animation: animate 6s linear infinite;
+	animation-delay: -3s;
+}
+
+
+
+
+
+@keyframes animate {
+	0%
+	{
+		transform: rotate(0deg);
+	}
+	100%
+	{
+		transform: rotate(360deg);
+	}
+}
+
+form {
+	position: absolute;
+	inset: 2px;
+	background: #19191a;
+	padding: 50px 40px;
+	border-radius: 8px;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+}
+
+h3 {
+	color: #f5873e;
+	font-weight: 500;
+	text-align: center;
+	letter-spacing: 0.1em;
+}
+
+
+
+h2 {
+	color: #F55D3E;
+	font-weight: 500;
+	text-align: center;
+	letter-spacing: 0.1em;
+}
+
+
+
+
+
+
+
+/*=================================================
+~ BUTTON REGISTER AND LOGIN
+~ BUTTON S'INCRIRE ET SE CONNECTER
+=================================================*/
+.button {
+	padding-bottom: 30px;
+	background-color: #F55D3E;
+	width: 285px;
+	height: 35px;
+	padding: 6px;
+	text-decoration: none;
+	text-align: center;
+	margin-top: 30px;
+	border-radius: 8px;
+	color: #fff;
+}
+
+.button:hover {
+	background-color: white;
+	color: #F55D3E;
+	transition: 1s;
+	box-shadow: none;
+}
+
+
+
+
+
+
+a {
+	align-items: center;
+	text-align: center;
+}
+
+a .fa {
+	color: #fff;
+	font-size: 30px;
+
+
+}
+
+
+
+
+
+
+/*=================================================
+~ INPUT DESIGN
+~ DESIGN CHAMP
+=================================================*/
+
+.inputBox {
+	position: relative;
+	width: 300px;
+	margin-top: 35px;
+}
+
+.inputBox input {
+	position: relative;
+	width: 100%;
+	padding: 17px 7px 7px;
+	background: transparent;
+	outline: none;
+	box-shadow: none;
+	border: none;
+	color: #fff;
+	font-size: 1em;
+	letter-spacing: 0.05em;
+	transition: 0.5s;
+	z-index: 10;
+}
+
+.inputBox span {
+	position: absolute;
+	left: 0;
+	padding: 17px 7px  7px;
+	pointer-events: none;
+	font-size: 1em;
+	color: #fff;
+	letter-spacing: 0.05em;
+	transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+	color: #F55D3E;
+	transform: translateX(0px) translateY(-34px);
+	font-size: 0.75em;
+}
+
+
+.inputBox i {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background: #F55D3E;
+	border-radius: 4px;
+	overflow: hidden;
+	transition: 0.5s;
+	pointer-events: none;
+	z-index: 9;
+}
+
+/*=================================================
+~ Activer si tu veux que le champ soit en couleur
+~ Activate if you want the field to be in color
+=================================================*/
+
+/*
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i {
+	height: 44px;
+}
+*/
+
+
+.links a {
+	color: rgb(255, 188, 157);
+	margin: 8px;
+}
+
+.links a:hover, 
+.links a:nth-child(2) {
+	color: #F55D3E;
+}
+
+input[type="submit"] {
+	border: none;
+	outline: none;
+	padding: 13px 15px;
+	background: #F55D3E;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 4px;
+	font-weight: 600;
+	width: 100px;
+	margin-top: 7px;
+}
+
+input[type="submit"]:hover{
+	background-color: white;
+	color: #F55D3E;
+	transition: 1s;
+}
+
+input[type="submit"]:active {
+	opacity: 0.8;
+}
+
+
+
+
+
+/*=================================================
+~ LETTER ANIMATION 
+~ LETTRE ANIMATION 
+
+=================================================*/
+
+canvas {
+	display: block;
+  }
+
+/*=================================================
+~ CHECKBOX 
+=================================================*/
+.checkbox {
+	margin: 8px;
+	cursor: pointer;
+}
+.checkbox-w {
+	color: #fff;
+	cursor: pointer;
+}
+
+/*=================================================
+~ BIENVUE PAGE CSS 
+=================================================*/
+
+.akwaba {
+	align-items: center;
+	text-align: center;
+}
+
+.akwaba img {
+	align-items: center;
+	width: 50%;
+	height: 50%;
+}
+
+
+
+
+
+
+
+
+
+/*=================================================
+~ COPYRIGHT
+=================================================*/
+.copyright {
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.copyright:hover {
+    color: #F55D3E;
+}
+
+/*=================================================
+~ Fin CSS
+~ End CSS
+=================================================*/
